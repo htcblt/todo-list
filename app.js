@@ -1,4 +1,3 @@
-//Select DOM
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
@@ -11,7 +10,6 @@ todoList.addEventListener('click', deleteTodo);
 filterOption.addEventListener('click', filterTodo);
 
 //Functions
-
 function addTodo(e) {
 	//Prevent natural behaviour
 	e.preventDefault();
@@ -21,10 +19,8 @@ function addTodo(e) {
 	//Create list
 	const newTodo = document.createElement('li');
 	newTodo.innerText = todoInput.value;
-	//Save to local - do this last
 	//Save to local
 	saveLocalTodos(todoInput.value);
-	//
 	newTodo.classList.add('todo-item');
 	todoDiv.appendChild(newTodo);
 	todoInput.value = '';
